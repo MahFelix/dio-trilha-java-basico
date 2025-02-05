@@ -11,20 +11,29 @@ public class ContaTerminal {
         String cliente = "Maria Roberta";
         double saldo = 550.54;
 
+       
+
         System.out.println("Digite o numéro da Agencia");
         String agencia = scanner.nextLine();
 
         System.out.println("Digite o número da conta");
         int numero = scanner.nextInt();
 
-    
-
         System.out.println("Prezado(a)," + cliente + " Obrigado por criar uma conta em nosso banco, sua agência é: " + agencia + ", conta: " + numero + " e seu saldo: " + saldo + " já está disponível para saque");
 
+
+        System.out.println("Deseja solicitar saque?");
+        double valorSolicitado = scanner.nextDouble();
+
+        if( valorSolicitado < saldo);
+        saldo = saldo - valorSolicitado;
+
+        double NovoSaldo = saldo;
+
+        System.out.println("seu saldo agora é de: " + NovoSaldo );
       
         scanner.close();
  
-
 
     }
 }
