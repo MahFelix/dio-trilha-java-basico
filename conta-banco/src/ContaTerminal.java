@@ -25,15 +25,26 @@ public class ContaTerminal {
         System.out.println("Deseja solicitar saque?");
         double valorSolicitado = scanner.nextDouble();
 
-        if( valorSolicitado < saldo);
-        saldo = saldo - valorSolicitado;
-
         double NovoSaldo = saldo;
 
+
+        if( valorSolicitado < saldo){
+        saldo = saldo - valorSolicitado;
         System.out.println("seu saldo agora é de: " + NovoSaldo );
+       }else
+        System.out.println("Saldo insuficiente");
+
+        // OU CONDIÇÃO TERNÁRIA ABAIXO:
+
+        // double novoSaldo = (valorSolicitado < saldo) ? saldo - valorSolicitado : saldo;
+        // String mensagem = (valorSolicitado < saldo) ? "Seu saldo agora é de: " + novoSaldo : "Saldo insuficiente";
+ 
+        // System.out.println(mensagem);
+
+        
+      
       
         scanner.close();
  
-
     }
 }
